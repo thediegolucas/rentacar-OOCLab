@@ -20,24 +20,27 @@ public class BookingSystem implements BookingSystemInterface {
     
     @Override
     public RentACarInterface setupRentACar(BufferedReader in) throws IOException {
-
+        
+        // Create an array list for storing cars
         String st, name;
         List<Car> cars = new ArrayList<>();
         name = in.readLine();
 
+        // While loop to check information in the txt file.
         while ((st = in.readLine()) != null) {
             String s[] = st.split(":");
 
             Make make = Make.valueOf(s[0]);
             double rate = Double.parseDouble(s[1]);
             int numCars = Integer.parseInt(s[2]);
-
+            
+            // For loop to check the number of cars
             for (int i=0; i<numCars; i++) {
                 Car car = new Car(i, make, rate);
                 cars.add(car);
             }
         }
-
+        
         RentACarInterface rentACarInterface = new RentACar(cars, name);
         return rentACarInterface;
     }
