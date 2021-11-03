@@ -19,7 +19,7 @@ import java.io.IOException;
 // https://github.com/thediegolucas/rentacar-OOCLab
 
 
-// Diego Lucas, 2020308 
+// Diego Lucas dos Santos, 2020308 
 // 
 
 
