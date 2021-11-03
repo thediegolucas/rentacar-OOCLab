@@ -93,7 +93,7 @@ public class RentACar implements RentACarInterface {
         return -1;
     }
 
-    
+    // This will check whether the car is available on a specific day
     @Override
     public boolean bookCar(Month month, int day, Make make, int lengthOfRent) {
 
