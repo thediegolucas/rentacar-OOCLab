@@ -43,6 +43,7 @@ public class RentACar implements RentACarInterface {
         this.name = name;
     }
 
+    //Check availability of the day and month in case it is available, otherwise return a false value.
     @Override
     public boolean checkAvailability(Month month, int day, Make make, int lengthOfRent) {
         int currentDay, flag;
@@ -67,6 +68,7 @@ public class RentACar implements RentACarInterface {
         return false;
     }
 
+    //Check car availability
     @Override
     public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
         int currentDay, flag;
@@ -91,6 +93,7 @@ public class RentACar implements RentACarInterface {
         return -1;
     }
 
+    
     @Override
     public boolean bookCar(Month month, int day, Make make, int lengthOfRent) {
 
