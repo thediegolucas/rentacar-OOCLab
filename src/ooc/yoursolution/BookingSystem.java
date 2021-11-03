@@ -10,7 +10,7 @@ package ooc.yoursolution;
  * @author diegolucas
  */
 
-import java.io.BufferedReader;      // Imported packages
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,21 +20,18 @@ public class BookingSystem implements BookingSystemInterface {
     
     @Override
     public RentACarInterface setupRentACar(BufferedReader in) throws IOException {
-        
-        //Create an array list to store the cars from the txt document
+
         String st, name;
         List<Car> cars = new ArrayList<>();
         name = in.readLine();
 
-        //While loop to separate information in the txt document
         while ((st = in.readLine()) != null) {
             String s[] = st.split(":");
 
             Make make = Make.valueOf(s[0]);
             double rate = Double.parseDouble(s[1]);
             int numCars = Integer.parseInt(s[2]);
-            
-            //For loop to check the number of cars
+
             for (int i=0; i<numCars; i++) {
                 Car car = new Car(i, make, rate);
                 cars.add(car);

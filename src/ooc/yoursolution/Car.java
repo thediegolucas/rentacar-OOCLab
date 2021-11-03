@@ -1,16 +1,22 @@
-import java.util.HashMap;
-import java.util.Map;
-import ooc.enums.*;
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package ooc.yoursolution;
 
 /**
  *
- * @author Marcelo Urbano
+ * @author diegolucas
  */
+
+import java.util.HashMap;
+import java.util.Map;
+import ooc.enums.*;
+
+
 public class Car implements CarInterface {
-    
- //Declare variables for the cars
+
     private int id;
     private Make make;
     private double rate;
@@ -23,11 +29,10 @@ public class Car implements CarInterface {
         createAvailability();
     }
 
-@Override
+    @Override
     public Map createAvailability() {
         map = new HashMap<>();
-        
- //Boolean to check the days of the month (availability)
+
         map.put(Month.JANUARY, new Boolean[31]);
         map.put(Month.FEBRUARY, new Boolean[28]);
         map.put(Month.MARCH, new Boolean[31]);
@@ -44,7 +49,6 @@ public class Car implements CarInterface {
         return map;
     }
 
-    //Getter and setter
     @Override
     public Make getMake() {
         return make;
@@ -80,8 +84,6 @@ public class Car implements CarInterface {
         return id;
     }
 
-    
-    //Check availability
     @Override
     public boolean isAvailable(Month month, int day) {
         Boolean[] availability = map.get(month);

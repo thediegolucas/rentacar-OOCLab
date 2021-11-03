@@ -9,6 +9,7 @@ package ooc.yoursolution;
  *
  * @author diegolucas
  */
+
 import java.util.List;
 import ooc.enums.*;
 
@@ -66,7 +67,7 @@ public class RentACar implements RentACarInterface {
         return false;
     }
 
-@Override
+    @Override
     public int getCarAvailable(Month month, int day, Make make, int lengthOfRent) {
         int currentDay, flag;
 

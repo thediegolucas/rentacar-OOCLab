@@ -16,11 +16,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-// https://github.com/thediegolucas/rentacar-OOCLab
+// INCLUDE HERE THE LINK TO THE GIT REPOSITORY AS A COMMENT!!!!
 
 
-// Diego Lucas dos Santos, 2020308
-// Marcelo Urbano Nascimento, 2020314
+// INCLUDE HERE THE FULL NAME AND STUDENT NUMBER OF BOTH TEAM MEMBERS 
+// AS A COMMENT!!!!
 
 
 
