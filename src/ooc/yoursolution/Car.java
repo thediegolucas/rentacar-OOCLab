@@ -7,7 +7,7 @@ package ooc.yoursolution;
 
 /**
  *
- * @author diegolucas
+ * @author marcelourbano
  */
 
 import java.util.HashMap;
@@ -17,6 +17,7 @@ import ooc.enums.*;
 
 public class Car implements CarInterface {
 
+    //Declare variables for the cars
     private int id;
     private Make make;
     private double rate;
@@ -33,6 +34,7 @@ public class Car implements CarInterface {
     public Map createAvailability() {
         map = new HashMap<>();
 
+        //Boolean to check the days of the month (availability)
         map.put(Month.JANUARY, new Boolean[31]);
         map.put(Month.FEBRUARY, new Boolean[28]);
         map.put(Month.MARCH, new Boolean[31]);
@@ -48,7 +50,8 @@ public class Car implements CarInterface {
 
         return map;
     }
-
+    
+    //Getter and Setter
     @Override
     public Make getMake() {
         return make;
@@ -84,6 +87,7 @@ public class Car implements CarInterface {
         return id;
     }
 
+    //Check availability
     @Override
     public boolean isAvailable(Month month, int day) {
         Boolean[] availability = map.get(month);
